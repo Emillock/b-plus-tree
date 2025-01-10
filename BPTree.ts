@@ -1,10 +1,11 @@
-class BPTree {
-    static maxDegree;
-    #right;
-    #leaf;
-    #val;
+import { Nullable } from "./types";
 
-    constructor(val, right, leaf) {
+export class BPTree {
+    #right : Nullable<BPTree>;
+    #leaf : Nullable<BPTree>;
+    #val : Nullable<BPTree>;
+
+    constructor(val : Nullable<BPTree>, right : Nullable<BPTree>, leaf : Nullable<BPTree>) {
         this.#val = val;
         this.#right = right;
         this.#leaf = leaf;
